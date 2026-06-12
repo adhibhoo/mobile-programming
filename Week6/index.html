@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firebase Realtime Console Test</title>
+</head>
+
+<body>
+  <h1>Check the browser console for Firebase logs</h1>
+
+  <!-- Link to external script (must be type="module" to use ES imports) -->
+  <script type="module" src="script.js"></script>
+
+  <h2>Create / Write User</h2>
+  <input type="text" id="create-id" placeholder="User ID" />
+  <input type="text" id="create-name" placeholder="Name" />
+  <input type="email" id="create-number" placeholder="Number" />
+  <input type="text" id="create-address" placeholder="Address" />
+  <input type="email" id="create-email" placeholder="Email" />
+  <input type="text" id="create-field" placeholder="Field" />
+  <input type="email" id="create-year" placeholder="Year" />
+  <input type="text" id="create-gender" placeholder="Gender" />
+  <input type="email" id="create-nickname" placeholder="Nickname" />
+  <input type="text" id="create-dob" placeholder="dob" />
+  <button onclick="writeUserData(
+    document.getElementById('create-id').value,
+    document.getElementById('create-name').value,
+    document.getElementById('create-email').value,
+    document.getElementById('create-number').value,
+    document.getElementById('create-address').value,
+    document.getElementById('create-field').value,
+    document.getElementById('create-year').value,
+    document.getElementById('create-gender').value,
+    document.getElementById('create-nickname').value,
+    document.getElementById('create-dob').value
+  )">Write User</button>
+
+  <h2>Read Users</h2>
+  <button onclick="readUser()">Read All Users (Check Console)</button>
+
+  <h3>Read One User by ID</h3>
+  <input type="text" id="read-id" placeholder="User ID" />
+  <button onclick="readUserById(document.getElementById('read-id').value)">Read User</button>
+  <p id="read-result"></p>
+
+  <h2>Update User</h2>
+  <input type="text" id="update-id" placeholder="User ID" />
+  <button onclick="fetchUserForUpdate(document.getElementById('update-id').value)">Fetch User</button>
+  <br /><br />
+  <input type="text" id="update-name" placeholder="New Name" />
+  <input type="email" id="update-email" placeholder="New Email" />
+  <input type="number" id="update-number" placeholder="New Number" />
+  <input type="address" id="update-address" placeholder="New Address" />
+  <input type="field" id="update-field" placeholder="New Field" />
+  <input type="year" id="update-year" placeholder="New Year" />
+  <input type="gender" id="update-gender" placeholder="New Gender" />
+  <input type="nickname" id="update-nickname" placeholder="New Nickname" />
+  <input type="dob" id="update-dob" placeholder="New DOB" />
+
+  <button onclick="updateUserData(
+    document.getElementById('update-id').value,
+    {
+      name: document.getElementById('update-name').value,
+      email: document.getElementById('update-email').value,
+      number: document.getElementById('update-number').value,
+      address: document.getElementById('update-address').value,
+      field: document.getElementById('update-field').value,
+      year: document.getElementById('update-year').value,
+      gender: document.getElementById('update-gender').value,
+      nickname: document.getElementById('update-nickname').value,
+      dob: document.getElementById('update-dob').value,
+    }
+  )">Update User</button>
+
+  <h2>Delete User</h2>
+  <input type="text" id="delete-id" placeholder="User ID" />
+  <button onclick="deleteUserData(document.getElementById('delete-id').value)">Delete User</button>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery Practice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="student.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #profile-card {
+      border: 2px solid #ccc;
+      padding: 20px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    #profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .highlighted {
+      border-color: orange !important;
+      background: #fff8e1;
+    }
+
+    .dark-mode {
+      background: #333;
+      color: white;
+    }
+
+    .rounded {
+      border-radius: 50% !important;
+    }
+
+    .shadow {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    #nickname-input {
+      display: block;
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+    .buttons {
+      margin-bottom: 10px;
+    }
+
+    .buttons h3 {
+      margin: 10px 0 5px;
+    }
+
+    button {
+      margin: 3px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      min-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Student's Card</h2>
+
+
+  <div id="profile-card">
+    <div><img src="fwaaaa.jpg" id="profile-photo" /></div>
+    <div id="student-name">Adhibhoo Pandey</div>
+    <div id="student-bio"><strong>CS Student</strong> who loves <em>JavaScript</em>.</div>
+    <ul id="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+    </ul>
+    <input type="text" id="nickname-input" placeholder="Enter nickname..." />
+  </div>
+
+  <br>
+
+
+  <div class="buttons">
+    <h3>1. Get &amp; Set</h3>
+    <button id="btn-show-name">Show Name</button>
+    <button id="btn-change-name">Change Name</button>
+    <button id="btn-show-bio">Show Bio</button>
+    <button id="btn-get-input">Get Input</button>
+    <button id="btn-set-input">Set Input</button>
+  </div>
+
+  <div class="buttons">
+    <h3>2. CSS Classes</h3>
+    <button id="btn-highlight">Highlight Card</button>
+    <button id="btn-remove-highlight">Remove Highlight</button>
+    <button id="btn-dark-mode">Toggle Dark Mode</button>
+    <button id="btn-rounded">Toggle Rounded</button>
+  </div>
+
+  <div class="buttons">
+    <h3>3. CSS Method</h3>
+    <button id="btn-red-bg">Red Background</button>
+    <button id="btn-reset-bg">Reset Background</button>
+  </div>
+
+  <div class="buttons">
+    <h3>4. Hide &amp; Show</h3>
+    <button id="btn-hide-photo">Hide Photo</button>
+    <button id="btn-show-photo">Show Photo</button>
+    <button id="btn-toggle-bio">Toggle Bio</button>
+  </div>
+
+  <div class="buttons">
+    <h3>5. Fade</h3>
+    <button id="btn-fade-out">Fade Out Card</button>
+    <button id="btn-fade-in">Fade In Card</button>
+    <button id="btn-fade-half">Fade to 50%</button>
+  </div>
+
+  <div class="buttons">
+    <h3>6. Slide</h3>
+    <button id="btn-slide-up">Slide Up Skills</button>
+    <button id="btn-slide-down">Slide Down Skills</button>
+    <button id="btn-slide-toggle">Slide Toggle Skills</button>
+  </div>
+
+  <div class="buttons">
+    <h3>7. Animate</h3>
+    <button id="btn-animate">Animate Card</button>
+  </div>
+
+
+  <h3>Output:</h3>
+  <div id="output"></div>
+
+
+</body>
+
+</html>
