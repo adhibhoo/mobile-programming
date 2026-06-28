@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+
+        @media (max-width: 991px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 767px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+        <img src="ivan-diaz-tOa-dWrZgnk-unsplash.jpg" alt="">
+        <img src="jocke-wulcan-KLOW1bD616Y-unsplash.jpg" alt="">
+        <img src="nikolai-lehmann-wS7eko4F2O8-unsplash.jpg" alt="">
+        <img src="ivan-diaz-tOa-dWrZgnk-unsplash.jpg" alt="">
+        <img src="jocke-wulcan-KLOW1bD616Y-unsplash.jpg" alt="">
+        <img src="nikolai-lehmann-wS7eko4F2O8-unsplash.jpg" alt="">
+        <img src="ivan-diaz-tOa-dWrZgnk-unsplash.jpg" alt="">
+        <img src="jocke-wulcan-KLOW1bD616Y-unsplash.jpg" alt="">
+    </div>
+
+</body>
+
+</html>
